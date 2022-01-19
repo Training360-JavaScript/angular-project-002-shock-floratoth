@@ -1,5 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'stream';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-action-button-group',
@@ -18,15 +17,16 @@ export class ActionButtonGroupComponent implements OnInit {
   }
 
   onSelectButtonClick(): void {
+    console.log('asddsa');
     this.selectClick.emit(true);
   }
 
   onUpdateButtonClick(): void {
-    this.selectClick.emit(true);
+    this.selectClick.emit();
   }
 
   onDeleteButtonClick(): void {
-    this.selectClick.emit(true);
+    this.selectClick.emit();
   }
 
 }
